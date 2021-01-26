@@ -1,0 +1,71 @@
+//
+// Author: OSTON <ti@oston.io>
+// Name: Martina
+// Description: Nuxt styles
+// File: global.scss
+// Location: @/assets/sass/layout
+//
+
+* {
+	margin: 0;
+	padding: 0;
+  box-sizing: border-box;
+  outline: none!important;
+} // -> all tags
+
+body {
+	max-width: 100vw;
+	width: 100%;
+	overflow-x: hidden;
+
+	@include font("Simplon");
+	@include scrollbar('vertical', #137cba, #30a500, #f7f7f7, tomato);
+
+	* {
+    @include font("Simplon");
+    -webkit-overflow-scrolling: touch !important;
+    outline: none!important;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+
+._g {
+  &\:disabled {
+    pointer-events: none!important;
+    touch-action: none !important;
+    cursor: default;
+  }
+
+  &\:clicable {
+    @extend %clicable;
+  } // clicable
+} // global
+
+// -> animations
+@-webkit-keyframes dots-jump {
+	0% {
+		bottom: 0;
+	}
+	40% {
+		bottom: 6px;
+	}
+	80% {
+		bottom: 0;
+	}
+}
+
+@keyframes dots-jump {
+	0% {
+		bottom: 0;
+	}
+	40% {
+		bottom: 6px;
+	}
+	80% {
+		bottom: 0;
+	}
+}
